@@ -7,39 +7,127 @@
     <meta name="description" content="Balandú, Café literario en Barranquilla, Colombia. Disfruta de un ambiente acogedor, libros del mes, menú variado y eventos culturales.">
 </head>
 <body>
+
     <header>
-        <h1>Balandú</h1>
-        <p>Café Literario</p>
+        <button class="menu-hamburguesa" aria-label="Abrir menú">
+            <i class="ti ti-menu-2"></i>
+        </button>   
+
+        <div class="encabezado-marca">
+            <img src="imagenes/logo-balandu-circulo.png" alt="Logo circular de Balandú" class="logo-circular"> 
+            <h1>Balandú</h1>
+            <p>Café literario</p>
+        </div>    
+        
+        <form class="buscador" role="search">
+            <i class="ti ti-search"></i>
+            <input type="search" name="buscar" placeholder="Buscar...">
+        </form>
+
         <nav>
             <ul>
+                <li><a href="#menú"><i class="ti ti-tools-kitchen-2"></i> Menú</a></li>
+                <li><a href="#contacto"><i class="ti ti-mail"></i> Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="encabezado-iconos">
+            <button aria-label="Idioma"><i class="ti ti-world"></i></button>
+            <button aria-label="Mi cuenta"><i class="ti ti-user"></i></button>
+            <button aria-label="Carrito">
+                <i class="ti ti-shopping-cart"></i>
+                <span class="contador-carrito">0</span>
+            </button>
+        </div>
+        
+        <nav class="menu-desplegable" id="menu-desplegable">
+            <button class="cerrar-menu" aria-label="Cerrar menú">
+                <i class="ti ti-x"></i>
+            </button>
+            <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
                 <li><a href="#libros-del-mes">Libros del mes</a></li>
                 <li><a href="#menú">Menú</a></li>
                 <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+        </nav>
     </header>
+
     <main>
-        <section id="inicio">
-            <h2>Bienvenidos a Balandú</h2>
-            <p>Un lugar donde el café y la lectura se encuentran.</p>
+        <section id="inicio" class="hero">
+            <div class="hero-contenido"> 
+                <h2>Bienvenidos a Balandú</h2>
+                <p>Un lugar donde el café y la lectura se encuentran.</p>
+                <a href="#libros-del-mes" class="boton">Explorar libros</a>
+            </div>
         </section>
-        <hr>
-        <section id="sobre-nosotros">
-            <h2>Sobre nosotros</h2>
-            <p>En Balandú, nos apasiona crear un espacio acogedor para los amantes de la lectura y el café. Nuestro objetivo es ofrecer una experiencia única donde puedas disfrutar de un buen libro acompañado de tu bebida favorita.</p>
-        </section>
-        <hr>
+       
         <section id="libros-del-mes">
             <h2>Libros del mes</h2>
             <p>Descubre nuestras selecciones literarias elegidas por nuestros clientes.</p>
-            <ol>
-                <li>En diciembre llegaban las brisas</li>
-                <li>Amanecer en la cosecha</li>
-                <li>El cuento de la criada</li>
-            </ol>
+            
+            <div class="carrusel-libros">
+                <button class="carrusel-flecha carrusel-flecha--izq" aria-label="Libro anterior">&#10094;</button>
+                 
+                <div class="carrusel-contenedor">
+                    <div class="carrusel-item activo">
+                        <img src="imagenes/en-diciembre-llegaban-las-brisas.jpg" alt="En diciembre llegaban las brisas">
+                        <p class="carrusel-titulo">En diciembre llegaban las brisas</p>
+                        <p class="carrusel-autor">Marvel Moreno</p>
+                        <a href="#" class="carrusel-enlace">Ver más</a>
+                    </div>
+
+                    <div class="carrusel-item">
+                        <img src="imagenes/amanecer-en-la-cosecha.jpg" alt="Amanecer en la cosecha">
+                        <p class="carrusel-titulo">Amanecer en la cosecha</p>
+                        <p class="carrusel-autor">Suzanne collins</p>
+                        <a href="#" class="carrusel-enlace">Ver más</a>
+                    </div>
+
+                    <div class="carrusel-item">
+                        <img src="imagenes/el-cuento-de-la-criada.jpg" alt="El cuento de la criada">
+                        <p class="carrusel-titulo">El cuento de la criada</p>
+                        <p class="carrusel-autor">Margaret Atwood</p>
+                        <a href="#" class="carrusel-enlace">Ver más</a>
+                    </div>
+
+                    <div class="carrusel-item">
+                        <img src="imagenes/cadaver-exquisito.jpg" alt="Cadaver exquisito">
+                        <p class="carrusel-titulo">Cadaver exquisito</p>
+                        <p class="carrusel-autor">Agustina Bazterica</p>
+                        <a href="#" class="carrusel-enlace">Ver más</a>
+                    </div>
+
+                    <div class="carrusel-item">
+                        <img src="imagenes/la-vegetariana.jpg" alt="La vegetariana">
+                        <p class="carrusel-titulo">La vegetariana</p>
+                        <p class="carrusel-autor">Han Kang</p>
+                        <a href="#" class="carrusel-enlace">Ver más</a>
+                    </div>
+
+                    <div class="carrusel-item">
+                        <img src="imagenes/yesteryear.jpg" alt="Yesteryear">
+                        <p class="carrusel-titulo">Yesteryear</p>
+                        <p class="carrusel-autor">Caro Claire Burke</p>
+                        <a href="#" class="carrusel-enlace">Ver más</a>
+                    </div>
+
+                </div>
+                <button class="carrusel-flecha carrusel-flecha--der" aria-label="Siguiente libro">&#10095;</button>
+            </div>
+
+            <div class="carrusel-indicadores">
+                <span class="carrusel-indicador activo" data-indice="0"></span>
+                <span class="carrusel-indicador" data-indice="1"></span>
+                <span class="carrusel-indicador" data-indice="2"></span>
+                <span class="carrusel-indicador" data-indice="3"></span>
+                <span class="carrusel-indicador" data-indice="4"></span>
+                <span class="carrusel-indicador" data-indice="5"></span>
+            </div>
         </section>
+
         <hr>
         <section id="menú">
             <h2>Menú</h2>
@@ -60,7 +148,7 @@
                <h3>Bebidas frías y Tés</h3>
             <ul>
                 <li>Smoothie de Fresa y Banano</li>
-                </li>Matcha Frío</li>
+                <li>Matcha Frío</li>
                 <li>Té frío de durazno</li>
                 <li>Té frío de frutos rojos</li>
                 <li>Limonada natural</li>
@@ -120,11 +208,34 @@
                     <p>Chocolate oscuro con centro de mermelada de mora.</p>
                 </li>
                 </section>
+
+        <section id="eventos">
+            <h2>Eventos</h2>
+            <p>Participa en nuestros eventos culturales y literarios.</p>
+            <ul>
+                <li>Club de lectura mensual</li>
+                <li>Talleres de escritura creativa</li>
+                <li>Presentaciones de libros</li>
+                <li>Charlas con autores</li>
+                <li>Exposiciones de arte local</li>
+            </ul>
+        </section>
+
+         <hr>
+        <section id="sobre-nosotros">
+            <h2>Sobre nosotros</h2>
+            <p>Balandú es más que un café o una librería; es un espacio donde la literatura, la cultura y la comunidad se unen. Es un lugar pensado para detenerse, conversar, descubrir un buen libro y disfrutar de un buen café.</p>
+            <p>Está abierto a quien busque una pausa distinta en su día: desde quien llega por una buena taza de café, pasando por quien busca un rincón tranquilo para leer, hasta quien desea participar en nuestos eventos.</p>
+            <p>Balandú te espera con las puertas abiertas.</p>
+        </section>
+        <hr>
+
     </main>
     <footer>
         <section id="Contacto">
             <h2>Contacto</h2>
             <p>¡Contáctanos para más información!</p>
+            <p>Instagram: @balandu</p>
             <p>Email: info@balandu.com</p>
             <p>Teléfono: +57 300 123 4567</p>   
             <p>Dirección: Carrera 123, Barranquilla, Colombia</p>
