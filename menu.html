@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Balandú</title>
     <meta name="description" content="Descubre nuestro menú completo de bebidas, comidas, postres y especiales de la casa.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -58,62 +60,263 @@
         <section id="menú">
             <h2>Menú</h2>
             <p>Descubre y explora nuestra selección de bebidas, comidas, postres y deliciosos especiales.</p>
+
+            <section id="combos">
+                <h3>Combos</h3>
+                <p>Duplas que ya probamos por ti, pensadas para estar juntas.</p>
+
+                <div class="carrusel-combos" id="carrusel-combos">
+                    <button class="carrusel-flecha carrusel-flecha--izq" aria-label="Combo anterior">&#10094;</button>
+
+                    <div class="carrusel-contenedor">
+                        <div class="carrusel-item activo">
+                            <p class="combo-nombre">Estudiante</p>
+                            <p class="combo-detalle">Espresso + Galletas de avena y pasas (x3)</p>
+                            <span class="menu-item-precio">$11.000</span>
+                        </div>
+
+                        <div class="carrusel-item">
+                            <p class="combo-nombre">Tarde de café</p>
+                            <p class="combo-detalle">Cappuccino + Brownie de chocolate</p>
+                            <span class="menu-item-precio">$17.000</span>
+                        </div>
+
+                        <div class="carrusel-item">
+                            <p class="combo-nombre">Brunch ligero</p>
+                            <p class="combo-detalle">Wrap de pollo + Limonada de coco</p>
+                            <span class="menu-item-precio">$22.000</span>
+                        </div>
+
+                        <div class="carrusel-item">
+                            <p class="combo-nombre">Dulce firma</p>
+                            <p class="combo-detalle">Heathcliff + Emma</p>
+                            <span class="menu-item-precio">$21.000</span>
+                        </div>
+
+                        <div class="carrusel-item">
+                            <p class="combo-nombre">Café y croissant</p>
+                            <p class="combo-detalle">Americano + Croissant de chocolate</p>
+                            <span class="menu-item-precio">$18.000</span>
+                        </div>
+
+                        <div class="carrusel-item">
+                            <p class="combo-nombre">Infusión y pastel</p>
+                            <p class="combo-detalle">Té frío de frutos rojos + Muffin de arándanos</p>
+                            <span class="menu-item-precio">$13.000</span>
+                        </div>
+                    </div>
+
+                    <button class="carrusel-flecha carrusel-flecha--der" aria-label="Combo siguiente">&#10095;</button>
+                </div>
+
+                <div class="carrusel-indicadores">
+                    <span class="carrusel-indicador activo" data-indice="0"></span>
+                    <span class="carrusel-indicador" data-indice="1"></span>
+                    <span class="carrusel-indicador" data-indice="2"></span>
+                    <span class="carrusel-indicador" data-indice="3"></span>
+                    <span class="carrusel-indicador" data-indice="4"></span>
+                    <span class="carrusel-indicador" data-indice="5"></span>
+                </div>
+            </section>
             
             <section id="bebidas">
                 <h3>Café</h3>
                 <ul>
-                    <li>Espresso</li>
-                    <li>Cappuccino</li>
-                    <li>Latte</li>
-                    <li>Americano</li>
-                    <li>Mocha</li>
-                    <li>Café de origen colombiano</li>
-                    <li>Café frío</li>
+                    <li>
+                        <span class="menu-item-nombre">Espresso</span>
+                        <span class="menu-item-precio">$8.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Cappuccino</span>
+                        <span class="menu-item-precio">$11.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Latte</span>
+                        <span class="menu-item-precio">$12.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Americano</span>
+                        <span class="menu-item-precio">$9.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Mocha</span>
+                        <span class="menu-item-precio">$13.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Café de origen colombiano</span>
+                        <span class="menu-item-precio">$10.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Café frío</span>
+                        <span class="menu-item-precio">$10.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
+                    </li>  
                 </ul>
 
                 <h3>Bebidas frías y Tés</h3>
                 <ul>
-                    <li>Smoothie de Fresa y Banano</li>
-                    <li>Matcha Frío</li>
-                    <li>Té frío de durazno</li>
-                    <li>Té frío de frutos rojos</li>
-                    <li>Limonada natural</li>
-                    <li>Limonada de coco</li>
-                     <li>Agua de panela con limón</li>
+                    <li>
+                        <span class="menu-item-nombre">Smoothie de Fresa y Banano</span>
+                        <span class="menu-item-precio">$10.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>  
+                    <li>
+                        <span class="menu-item-nombre">Matcha Frío</span>
+                        <span class="menu-item-precio">$13.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>  
+                    <li>
+                        <span class="menu-item-nombre">Té frío de frutos rojos</span>
+                        <span class="menu-item-precio">$9.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                    </li>  
+                    <li>
+                        <span class="menu-item-nombre">Té frío de durazno</span>
+                        <span class="menu-item-precio">$9.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                    </li>  
+                    <li>
+                        <span class="menu-item-nombre">Limonada natural</span>
+                        <span class="menu-item-precio">$8.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                    </li>  
+                    <li>
+                        <span class="menu-item-nombre">Limonada de coco</span>
+                        <span class="menu-item-precio">$12.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                    </li>  
+                    <li>
+                        <span class="menu-item-nombre">Agua de panela con limón</span>
+                        <span class="menu-item-precio">$7.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                    </li> 
                 </ul>
 
                 <h3>Otras bebidas</h3>
                 <ul>
-                    <li>Chocolate caliente</li>
-                    <li>Agua mineral</li>
+                    <li>
+                        <span class="menu-item-nombre">Chocolate caliente</span>
+                        <span class="menu-item-precio">$8.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Agua mineral</span>
+                        <span class="menu-item-precio">$6.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
+                    </li>
                 </ul>
             </section>
 
             <section id="comida">
                 <h3>Comidas</h3>
                 <ul>
-                    <li>Ensalada César</li>
-                    <li>Wrap de pollo</li>
-                    <li>Sándwich de pavo</li>
-                    <li>Panini de jamón y queso</li>
-                    <li>Pan de yuca</li>
-                    <li>Croissant de jamón y queso</li>
-                    <li>Croissant de chocolate</li>
+                    <li>
+                        <span class="menu-item-nombre">Ensalada César</span>
+                        <span class="menu-item-precio">$20.000</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Wrap de pollo</span>
+                        <span class="menu-item-precio">$13.000</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Sándwich de pavo</span>
+                        <span class="menu-item-precio">$11.000</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Panini de jamón y queso</span>
+                        <span class="menu-item-precio">$10.000</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Pan de yuca</span>
+                        <span class="menu-item-precio">$6.000</span>
+                        <span class="etiqueta-dieta etiqueta-sin-gluten">Sin gluten</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Croissant de jamón y queso</span>
+                        <span class="menu-item-precio">$13.000</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Croissant de chocolate</span>
+                        <span class="menu-item-precio">$11.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
                 </ul>
             </section>
 
             <section id="postres">
                 <h3>Postres</h3>
                 <ul>
-                    <li>Tarta de manzana</li>
-                    <li>Brownie de chocolate</li>
-                    <li>Galletas de avena y pasas</li>
-                    <li>Muffin de arándanos</li>
-                    <li>Torta de zanahoria</li>
-                    <li>Torta de chocolate</li>
-                    <li>Roll de canela</li>
+                    <li>
+                        <span class="menu-item-nombre">Tarta de manzana</span>
+                        <span class="menu-item-precio">$8.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Brownie de chocolate</span>
+                        <span class="menu-item-precio">$7.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-frutos-secos">Contiene frutos secos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Galletas de avena y pasas</span>
+                        <span class="menu-item-precio">$4.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Muffin de arándanos</span>
+                        <span class="menu-item-precio">$5.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Torta de zanahoria</span>
+                        <span class="menu-item-precio">$6.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-frutos-secos">Contiene frutos secos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Torta de chocolate</span>
+                        <span class="menu-item-precio">$7.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
+                    <li>
+                        <span class="menu-item-nombre">Roll de canela</span>
+                        <span class="menu-item-precio">$4.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                    </li>
                 </ul>
-            </section>
+            </section>    
 
             <section id="especiales">
                 <h3>Especiales de la casa</h3>
@@ -123,36 +326,49 @@
                         <h4>Cova</h4>
                         <p class="especial-cita">"¡Los devoró la selva!"</p>
                         <p class="especial-descripcion">Arepa de maíz tostada con carne desmechada, aguacate y ají casero.</p>
+                        <span class="menu-item-precio">$15.000</span>
+                        <span class="etiqueta-dieta etiqueta-sin-gluten">Sin gluten</span>                        
                     </article>
-
                     <article class="especial">
                         <h4>El Quijote</h4>
                         <p class="especial-cita">"En un lugar de la Mancha, de cuyo nombre no quiero acordarme..."</p>
                         <p class="especial-descripcion">Tostadas de pan artesanal con queso costeño derretido, jamón serrano y miel.</p>
+                        <span class="menu-item-precio">$10.000</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
                     </article>
-                    
                     <article class="especial">
                         <h4>Heathcliff</h4>
                         <p class="especial-cita">"¡Yo soy Heathcliff!"</p>
                         <p class="especial-descripcion">Limonada oscura de jamaica con romero y pimienta rosada.</p>
+                        <span class="menu-item-precio">$9.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                        <span class="etiqueta-dieta etiqueta-sin-gluten">Sin gluten</span>
                     </article>
-
                     <article class="especial">
                         <h4>Lear</h4>
                         <p class="especial-cita">"Nada saldrá de la nada."</p>
                         <p class="especial-descripcion">Té negro ahumado con una rodaja de naranja quemada al soplete.</p>
+                        <span class="menu-item-precio">$8.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
+                        <span class="etiqueta-dieta etiqueta-sin-gluten">Sin gluten</span>
+                        <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
                     </article>
-
                     <article class="especial">
                         <h4>Emma</h4>
                         <p class="especial-cita">"Emma Woodhouse hermosa, inteligente y rica..."</p>
-                        <p class="especial-descripcion">Cheesecake de frutos rojos.</p>
+                        <p class="especial-descripcion">Cheesecake de frutos rojos con crocante de almendras.</p>
+                        <span class="menu-item-precio">$16.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-frutos-secos">Contiene frutos secos</span>
                     </article>
-
                     <article class="especial">
                         <h4>Dorian</h4>
                         <p class="especial-cita">"Hay algo peor que se hable de uno: que no se hable en absoluto."</p>
                         <p class="especial-descripcion">Chocolate oscuro con centro de mermelada de mora.</p>
+                        <span class="menu-item-precio">$11.000</span>
+                        <span class="etiqueta-dieta etiqueta-vegetariano">Vegetariano</span>
+                        <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
                     </article>
                 </div>
             </section>
@@ -164,15 +380,19 @@
     </main>
 
     <footer>
-        <section id="Contacto">
-            <h2>Contacto</h2>
-            <p>¡Contáctanos para más información!</p>
-            <p>Instagram: @balandu</p>
-            <p>Email: info@balandu.com</p>
-            <p>Teléfono: +57 300 123 4567</p>   
-            <p>Dirección: Carrera 123, Barranquilla, Colombia</p>
-            <p>Horarios: Lunes a viernes de 8:00 AM a 8:00 PM y sabados, domingos y festivos de 8:00 AM a 9:00 PM</p>
-        </section>
-         <p>&copy; 2023 Balandú. Todos los derechos reservados.</p>
+         <div class="footer-marca">
+            <h4>Balandú</h4>
+            <p>Eslogan???</p>
+        </div>
+
+        <div class="footer-redes">
+            <a href="https://instagram.com/balandu" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://wa.me/573001234567" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+            <a href="mailto:info@balandu.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        </div>
+
+        <p class="footer-direccion"><i class="fa fa-map-marker"></i> Carrera 123, Barranquilla, Colombia.</p>
+
+        <p class="footer-copy">&copy; 2026 Balandú. Todos los derechos reservados.</p>
     </footer>
 </body>
