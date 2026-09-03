@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balandú - Café Literario</title>
     <meta name="description" content="Balandú, Café literario en Barranquilla, Colombia. Disfruta de un ambiente acogedor, libros del mes, menú variado y eventos culturales.">
-    <link rel="icon" href="imagenes/favicon.ico" type="image/x-ico">
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
 </head>
 <body>
-    <header>
+   <header>
         <button class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-desplegable">
             <i class="ti ti-menu-2"></i>
-        </button>   
+        </button>    
 
         <div class="encabezado-marca">
             <img src="imagenes/logo-balandu-circulo.png" alt="Logo circular de Balandú" class="logo-circular"> 
-            <h1>Balandú</h1>
+            <p class="nombre-marca">Balandú</p>
             <p>Café literario</p>
         </div>    
         
@@ -31,15 +31,28 @@
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="menu.html"><i class="ti ti-tools-kitchen-2"></i> Menú</a></li>
-                <li><a href="#contacto"><i class="ti ti-mail"></i> Contacto</a></li>
+                <li><a href="index.html#contacto"><i class="ti ti-mail"></i> Contacto</a></li>
             </ul>
         </nav>
 
         <div class="encabezado-iconos">
-            <button aria-label="Idioma"><i class="ti ti-world"></i></button>
-            <button aria-label="Mi cuenta"><i class="ti ti-user"></i></button>
-            <button aria-label="Carrito">
-                <i class="ti ti-shopping-cart"></i>
+            <div class="selector-idioma">
+                <button type="button" class="selector-idioma-boton" aria-expanded="false" aria-controls="idioma-despegable" aria-label="Cambiar idioma">
+                    <i class="ti ti-world" aria-hidden="true"></i>
+                    <span class="idioma-actual">ES</span>
+                </button>
+                <ul class="idioma-despegable" id="idioma-despegable" aria-label="Opciones de idioma">
+                    <li><button type="button" class="idioma-opcion" data-idioma="es">Español</button></li>
+                    <li><button type="button" class="idioma-opcion" data-idioma="en">English</button></li>
+                </ul>
+            </div>
+            
+            <button type="button" aria-label="Mi cuenta">
+                <i class="ti ti-user" aria-hidden="true"></i>
+            </button>
+
+            <button class="carrito-boton" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
+                <i class="ti ti-shopping-cart" aria-hidden="true"></i>
                 <span class="contador-carrito">0</span>
             </button>
         </div>
@@ -49,12 +62,12 @@
                 <i class="ti ti-x"></i>
             </button>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#libros-del-mes">Libros del mes</a></li>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#libros-del-mes">Libros del mes</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html#eventos">Eventos</a></li>
+                <li><a href="index.html#sobre-nosotros">Sobre nosotros</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -62,7 +75,7 @@
     <main>
         <section id="inicio" class="hero">
             <div class="hero-contenido"> 
-                <h2>Bienvenidos a Balandú</h2>
+                <h1>Bienvenidos a Balandú</h1>
                 <p>Un lugar donde el café y la lectura se encuentran.</p>
                 <a href="#libros-del-mes" class="boton">Explorar libros</a>
             </div>
@@ -256,14 +269,48 @@
         </div>
 
         <div class="footer-redes">
-            <a href="https://instagram.com/balandu" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
-            <a href="https://wa.me/573001234567" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
-            <a href="mailto:info@balandu.com" aria-label="Email"><i class="ti ti-mail"></i></a>
+            <a href="https://instagram.com/balandu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:info@balandu.com" aria-label="Email">
+                <i class="ti ti-mail" aria-hidden="true"></i>
+            </a>
         </div>
 
         <p class="footer-direccion"><i class=" ti ti-map-pin"></i> Carrera 123, Barranquilla, Colombia.</p>
 
         <p class="footer-copy">&copy; 2026 Balandú. Todos los derechos reservados.</p>
     </footer>
+
+    <button type="button" class="carrito-boton-flotante" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
+        <i class="ti ti-shopping-cart" aria-hidden="true"></i>
+        <span class="carrito-contador">0</span>
+    </button>
+
+    <div class="carrito-overlay" id="carrito-overlay"></div>
+
+    <aside class="carrito-panel" id="carrito-panel" aria-hidden="true">
+        <div class="carrito-panel-header">
+            <h2 class="carrito-titulo">Tu pedido</h2>
+            <button type="button" class="carrito-cerrar" aria-label="Cerrar carrito">
+                <i class="ti ti-x" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="carrito-items" id="carrito-items">
+            <p class="carrito-vacio">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="carrito-panel-footer">
+            <div class="carrito-total">
+                <span>Total</span>
+                <span class="carrito-total-monto">$0</span>
+            </div>
+        </div>
+    </aside>
+
 </body>
 </html>

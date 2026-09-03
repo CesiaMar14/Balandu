@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Balandú</title>
     <meta name="description" content="Descubre nuestro menú completo de bebidas, comidas, postres y especiales de la casa.">
-    <link rel="icon" href="imagenes/favicon.ico" type="image/x-ico">
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
 
         <div class="encabezado-marca">
             <img src="imagenes/logo-balandu-circulo.png" alt="Logo circular de Balandú" class="logo-circular"> 
-            <h1>Balandú</h1>
+            <p class="nombre-marca">Balandú</p>
             <p>Café literario</p>
         </div>    
         
@@ -36,10 +36,23 @@
         </nav>
 
         <div class="encabezado-iconos">
-            <button aria-label="Idioma"><i class="ti ti-world"></i></button>
-            <button aria-label="Mi cuenta"><i class="ti ti-user"></i></button>
-            <button aria-label="Carrito">
-                <i class="ti ti-shopping-cart"></i>
+            <div class="selector-idioma">
+                <button type="button" class="selector-idioma-boton" aria-expanded="false" aria-controls="idioma-despegable" aria-label="Cambiar idioma">
+                    <i class="ti ti-world" aria-hidden="true"></i>
+                    <span class="idioma-actual">ES</span>
+                </button>
+                <ul class="idioma-despegable" id="idioma-despegable" aria-label="Opciones de idioma">
+                    <li><button type="button" class="idioma-opcion" data-idioma="es">Español</button></li>
+                    <li><button type="button" class="idioma-opcion" data-idioma="en">English</button></li>
+                </ul>
+            </div>
+            
+            <button type="button" aria-label="Mi cuenta">
+                <i class="ti ti-user" aria-hidden="true"></i>
+            </button>
+
+            <button class="carrito-boton" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
+                <i class="ti ti-shopping-cart" aria-hidden="true"></i>
                 <span class="contador-carrito">0</span>
             </button>
         </div>
@@ -60,8 +73,8 @@
     </header>
 
     <main>
-        <section id="menu">
-            <h2>Menú</h2>
+        <section id="nuestro-menu" class="menu">
+            <h1>Menú</h1>
             <p>Descubre y explora nuestra selección de bebidas, comidas, postres y deliciosos especiales.</p>
 
             <section id="combos">
@@ -170,6 +183,9 @@
                     <li class="menu-item">
                         <div class="menu-item-info">
                             <span class="menu-item-nombre">Café de origen colombiano</span>
+                            <p class="menu-item-descripcion">
+                                Cultivado bajo sombra por familias indígenas arhuacas, koguis, wiwas y kankuamas en las montañas de la Sierra Nevada de Santa Marta. <br> Notas de chocolate, nuez y caramelo con un toque floral; acidez suave y cuerpo cremoso.
+                            </p>
                             <span class="etiqueta-dieta etiqueta-vegano">Vegano</span>
                             <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
                         </div>
@@ -449,14 +465,50 @@
         </div>
 
          <div class="footer-redes">
-            <a href="https://instagram.com/balandu" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
-            <a href="https://wa.me/573001234567" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
-            <a href="mailto:info@balandu.com" aria-label="Email"><i class="ti ti-mail"></i></a>
+            <a href="https://instagram.com/balandu" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:info@balandu.com" aria-label="Email">
+                <i class="ti ti-mail" aria-hidden="true"></i>
+            </a>
         </div>
 
-        <p class="footer-direccion"><i class="ti ti-map-pin"></i> Carrera 123, Barranquilla, Colombia.</p>
+        <p class="footer-direccion">
+            <i class="ti ti-map-pin" aria-hidden="true"></i> Carrera 123, Barranquilla, Colombia.
+        </p>
 
         <p class="footer-copy">&copy; 2026 Balandú. Todos los derechos reservados.</p>
     </footer>
+
+    <button type="button" class="carrito-boton-flotante" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
+        <i class="ti ti-shopping-cart" aria-hidden="true"></i>
+        <span class="carrito-contador">0</span>
+    </button>
+
+    <div class="carrito-overlay" id="carrito-overlay"></div>
+
+    <aside class="carrito-panel" id="carrito-panel" aria-hidden="true">
+        <div class="carrito-panel-header">
+            <h2 class="carrito-titulo">Tu pedido</h2>
+            <button type="button" class="carrito-cerrar" aria-label="Cerrar carrito">
+                <i class="ti ti-x" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="carrito-items" id="carrito-items">
+            <p class="carrito-vacio">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="carrito-panel-footer">
+            <div class="carrito-total">
+                <span>Total</span>
+                <span class="carrito-total-monto">$0</span>
+            </div>
+        </div>
+    </aside>
+    
 </body>
 </html>
