@@ -1,0 +1,34 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+:root {
+    /* Paleta principal */
+    --cafe-oscuro: #4A3226;
+    --marfil-calido: #F6EBD7;
+    --terracota-vivo: #E8632E;
+    --verde-hierba: #9CAE6B;
+    --amarillo-dorado: #E8B23A;
+
+    /* Colores de estado (para ciertos estados) */
+    --verde-bandera: #159A6B;
+    --rojo-guayaba: #C23B4E;
+
+    /* Tipografía */
+    --fuente-titulos: 'Fraunces', serif;
+    --fuente-subtitulos: 'Sen', sans-serif;
+    --fuente-cuerpo: 'Familjen Grotesk', sans-serif;
+}   
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--marfil-calido);
+    color: var(--cafe-oscuro);
+    font-weight: 400;
+    line-height: 1.6;
+}
+h1, h2, h3{
+font-family: var(--fuente-titulos);
+font-optical-sizing: auto;
+font-weight: 600;
+}

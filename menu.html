@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Balandú</title>
     <meta name="description" content="Descubre nuestro menú completo de bebidas, comidas, postres y especiales de la casa.">
+    <meta property="og:title" content="Menú - Balandú">
+    <meta property="og:description" content="Donde el café y las buenas historias se encuentran. Descubre nuestro menú completo de bebidas, comidas, postres y especiales de la casa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cesiamar14.github.io/Balandu/menu.html">
+    <meta property="og:image" content="https://cesiamar14.github.io/Balandu/imagenes/og-imagen.png">
+    <meta property="og:locale" content="es_CO">
+    <link rel="canonical" href="https://cesiamar14.github.io/Balandu/menu.html">
     <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <button class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-desplegable">
-            <i class="ti ti-menu-2"></i>
+        <button type="button" class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-desplegable">
+            <i class="ti ti-menu-2" aria-hidden="true"></i>
         </button>    
 
         <div class="encabezado-marca">
@@ -24,24 +35,24 @@
             <label for="buscar" class="sr-only">Buscar en Balandú</label>
             <input type="search" id="buscar" name="buscar" placeholder="Buscar...">
             <button type="submit" class="buscador-boton" aria-label="Buscar">
-                <i class="ti ti-search"></i>
+                <i class="ti ti-search" aria-hidden="true"></i>
             </button>
         </form>
 
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="menu.html"><i class="ti ti-tools-kitchen-2"></i> Menú</a></li>
-                <li><a href="index.html#contacto"><i class="ti ti-mail"></i> Contacto</a></li>
+                <li><a href="menu.html"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i> Menú</a></li>
+                <li><a href="index.html#contacto"><i class="ti ti-mail" aria-hidden="true"></i> Contacto</a></li>
             </ul>
         </nav>
 
         <div class="encabezado-iconos">
             <div class="selector-idioma">
-                <button type="button" class="selector-idioma-boton" aria-expanded="false" aria-controls="idioma-despegable" aria-label="Cambiar idioma">
+                <button type="button" class="selector-idioma-boton" aria-expanded="false" aria-controls="idioma-desplegable" aria-label="Cambiar idioma">
                     <i class="ti ti-world" aria-hidden="true"></i>
                     <span class="idioma-actual">ES</span>
                 </button>
-                <ul class="idioma-despegable" id="idioma-despegable" aria-label="Opciones de idioma">
+                <ul class="idioma-desplegable" id="idioma-desplegable" aria-label="Opciones de idioma">
                     <li><button type="button" class="idioma-opcion" data-idioma="es">Español</button></li>
                     <li><button type="button" class="idioma-opcion" data-idioma="en">English</button></li>
                 </ul>
@@ -51,15 +62,15 @@
                 <i class="ti ti-user" aria-hidden="true"></i>
             </button>
 
-            <button class="carrito-boton" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
+            <button type="button" class="carrito-boton" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
                 <i class="ti ti-shopping-cart" aria-hidden="true"></i>
-                <span class="contador-carrito">0</span>
+                <span class="carrito-contador">0</span>
             </button>
         </div>
         
         <nav class="menu-desplegable" id="menu-desplegable" aria-label="Menú desplegable">
-            <button class="cerrar-menu" aria-label="Cerrar menú">
-                <i class="ti ti-x"></i>
+            <button type="button" class="cerrar-menu" aria-label="Cerrar menú">
+                <i class="ti ti-x" aria-hidden="true"></i>
             </button>
             <ul>
                 <li><a href="index.html#inicio">Inicio</a></li>
@@ -78,10 +89,10 @@
             <p>Descubre y explora nuestra selección de bebidas, comidas, postres y deliciosos especiales.</p>
 
             <section id="combos">
-                <h3>Combos</h3>
+                <h2>Combos</h2>
                 <p>Duplas que ya probamos por ti, pensadas para estar juntas.</p>
 
-                <div class="carrusel-combos" id="carrusel-combos">
+                <div class="carrusel carrusel-combos" id="carrusel-combos">
                     <button class="carrusel-flecha carrusel-flecha--izq" aria-label="Combo anterior">&#10094;</button>
 
                     <div class="carrusel-contenedor" id="carrusel-contenedor-combos">
@@ -123,19 +134,20 @@
                     </div>
 
                     <button class="carrusel-flecha carrusel-flecha--der" aria-label="Combo siguiente">&#10095;</button>
-                </div>
-
-                <div class="carrusel-indicadores">
-                    <button class="carrusel-indicador activo" data-indice="0" aria-label="Ir al combo 1"></button>
-                    <button class="carrusel-indicador" data-indice="1" aria-label="Ir al combo 2"></button>
-                    <button class="carrusel-indicador" data-indice="2" aria-label="Ir al combo 3"></button>
-                    <button class="carrusel-indicador" data-indice="3" aria-label="Ir al combo 4"></button>
-                    <button class="carrusel-indicador" data-indice="4" aria-label="Ir al combo 5"></button>
-                    <button class="carrusel-indicador" data-indice="5" aria-label="Ir al combo 6"></button>
+                
+                    <div class="carrusel-indicadores">
+                        <button class="carrusel-indicador activo" data-indice="0" aria-label="Ir al combo 1"></button>
+                        <button class="carrusel-indicador" data-indice="1" aria-label="Ir al combo 2"></button>
+                        <button class="carrusel-indicador" data-indice="2" aria-label="Ir al combo 3"></button>
+                        <button class="carrusel-indicador" data-indice="3" aria-label="Ir al combo 4"></button>
+                        <button class="carrusel-indicador" data-indice="4" aria-label="Ir al combo 5"></button>
+                        <button class="carrusel-indicador" data-indice="5" aria-label="Ir al combo 6"></button>
+                    </div>
                 </div>
             </section>
             
             <section id="bebidas">
+                <h2>Bebidas</h2>
                 <h3>Café</h3>
                 <ul>
                     <li class="menu-item">
@@ -278,7 +290,7 @@
             </section>
 
             <section id="comida">
-                <h3>Comidas</h3>
+                <h2>Comidas</h2>
                 <ul>
                     <li class="menu-item">
                         <div class="menu-item-info">                               
@@ -334,7 +346,7 @@
             </section>
 
             <section id="postres">
-                <h3>Postres</h3>
+                <h2>Postres</h2>
                 <ul>
                     <li class="menu-item">
                         <div class="menu-item-info">
@@ -398,25 +410,25 @@
             </section>    
 
             <section id="especiales">
-                <h3>Especiales de la casa</h3>
+                <h2>Especiales de la casa</h2>
 
                 <div class="especiales-grid">
                     <article class="especial">
-                        <h4>Cova</h4>
+                        <h3>Cova</h3>
                         <p class="especial-cita">"¡Los devoró la selva!"</p>
                         <p class="especial-descripcion">Arepa de maíz tostada con carne desmechada, aguacate y ají casero.</p>
                         <span class="menu-item-precio">$15.000</span>
                         <span class="etiqueta-dieta etiqueta-sin-gluten">Sin gluten</span>                        
                     </article>
                     <article class="especial">
-                        <h4>El Quijote</h4>
+                        <h3>El Quijote</h3>
                         <p class="especial-cita">"En un lugar de la Mancha, de cuyo nombre no quiero acordarme..."</p>
                         <p class="especial-descripcion">Tostadas de pan artesanal con queso costeño derretido, jamón serrano y miel.</p>
                         <span class="menu-item-precio">$10.000</span>
                         <span class="etiqueta-dieta etiqueta-contiene-lacteos">Contiene lácteos</span>
                     </article>
                     <article class="especial">
-                        <h4>Heathcliff</h4>
+                        <h3>Heathcliff</h3>
                         <p class="especial-cita">"¡Yo soy Heathcliff!"</p>
                         <p class="especial-descripcion">Limonada oscura de jamaica con romero y pimienta rosada.</p>
                         <span class="menu-item-precio">$9.000</span>
@@ -424,7 +436,7 @@
                         <span class="etiqueta-dieta etiqueta-sin-gluten">Sin gluten</span>
                     </article>
                     <article class="especial">
-                        <h4>Lear</h4>
+                        <h3>Lear</h3>
                         <p class="especial-cita">"Nada saldrá de la nada."</p>
                         <p class="especial-descripcion">Té negro ahumado con una rodaja de naranja quemada al soplete.</p>
                         <span class="menu-item-precio">$8.000</span>
@@ -433,7 +445,7 @@
                         <span class="etiqueta-dieta etiqueta-sin-azucar">Sin azúcar</span>
                     </article>
                     <article class="especial">
-                        <h4>Emma</h4>
+                        <h3>Emma</h3>
                         <p class="especial-cita">"Emma Woodhouse hermosa, inteligente y rica..."</p>
                         <p class="especial-descripcion">Cheesecake de frutos rojos con crocante de almendras.</p>
                         <span class="menu-item-precio">$16.000</span>
@@ -442,7 +454,7 @@
                         <span class="etiqueta-dieta etiqueta-contiene-frutos-secos">Contiene frutos secos</span>
                     </article>
                     <article class="especial">
-                        <h4>Dorian</h4>
+                        <h3>Dorian</h3>
                         <p class="especial-cita">"Hay algo peor que se hable de uno: que no se hable en absoluto."</p>
                         <p class="especial-descripcion">Chocolate oscuro con centro de mermelada de mora.</p>
                         <span class="menu-item-precio">$11.000</span>
@@ -461,7 +473,7 @@
     <footer>
          <div class="footer-marca">
             <h3>Balandú</h3>
-            <p>Eslogan???</p>
+            <p>Donde el café y las buenas historias se encuentran.</p>
         </div>
 
          <div class="footer-redes">
@@ -507,6 +519,7 @@
                 <span>Total</span>
                 <span class="carrito-total-monto">$0</span>
             </div>
+            <button type="button" class="carrito-checkout" id="carrito-checkout">Finalizar pedido</button>
         </div>
     </aside>
     

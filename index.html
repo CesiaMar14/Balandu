@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balandú - Café Literario</title>
     <meta name="description" content="Balandú, Café literario en Barranquilla, Colombia. Disfruta de un ambiente acogedor, libros del mes, menú variado y eventos culturales.">
+    <meta property="og:title" content="Balandú - Café Literario">
+    <meta property="og:description" content="Donde el café y las buenas historias se encuentran. Café literario en Barranquilla, Colombia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cesiamar14.github.io/Balandu/index.html">
+    <meta property="og:image" content="https://cesiamar14.github.io/Balandu/imagenes/og-imagen.png">
+    <meta property="og:locale" content="es_CO">
+    <link rel="canonical" href="https://cesiamar14.github.io/Balandu/index.html">
     <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
    <header>
-        <button class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-desplegable">
-            <i class="ti ti-menu-2"></i>
+        <button type="button" class="menu-hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-desplegable">
+            <i class="ti ti-menu-2" aria-hidden="true"></i>
         </button>    
 
         <div class="encabezado-marca">
@@ -24,24 +35,24 @@
             <label for="buscar" class="sr-only">Buscar en Balandú</label>
             <input type="search" id="buscar" name="buscar" placeholder="Buscar...">
             <button type="submit" class="buscador-boton" aria-label="Buscar">
-                <i class="ti ti-search"></i>
+                <i class="ti ti-search" aria-hidden="true"></i>
             </button>
         </form>
 
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="menu.html"><i class="ti ti-tools-kitchen-2"></i> Menú</a></li>
-                <li><a href="index.html#contacto"><i class="ti ti-mail"></i> Contacto</a></li>
+                <li><a href="menu.html"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i> Menú</a></li>
+                <li><a href="index.html#contacto"><i class="ti ti-mail" aria-hidden="true"></i> Contacto</a></li>
             </ul>
         </nav>
 
         <div class="encabezado-iconos">
             <div class="selector-idioma">
-                <button type="button" class="selector-idioma-boton" aria-expanded="false" aria-controls="idioma-despegable" aria-label="Cambiar idioma">
+                <button type="button" class="selector-idioma-boton" aria-expanded="false" aria-controls="idioma-desplegable" aria-label="Cambiar idioma">
                     <i class="ti ti-world" aria-hidden="true"></i>
                     <span class="idioma-actual">ES</span>
                 </button>
-                <ul class="idioma-despegable" id="idioma-despegable" aria-label="Opciones de idioma">
+                <ul class="idioma-desplegable" id="idioma-desplegable" aria-label="Opciones de idioma">
                     <li><button type="button" class="idioma-opcion" data-idioma="es">Español</button></li>
                     <li><button type="button" class="idioma-opcion" data-idioma="en">English</button></li>
                 </ul>
@@ -51,15 +62,15 @@
                 <i class="ti ti-user" aria-hidden="true"></i>
             </button>
 
-            <button class="carrito-boton" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
+            <button type="button" class="carrito-boton" aria-label="Abrir carrito" aria-expanded="false" aria-controls="carrito-panel">
                 <i class="ti ti-shopping-cart" aria-hidden="true"></i>
-                <span class="contador-carrito">0</span>
+                <span class="carrito-contador">0</span>
             </button>
         </div>
         
         <nav class="menu-desplegable" id="menu-desplegable" aria-label="Menú desplegable">
-            <button class="cerrar-menu" aria-label="Cerrar menú">
-                <i class="ti ti-x"></i>
+            <button type="button" class="cerrar-menu" aria-label="Cerrar menú">
+                <i class="ti ti-x" aria-hidden="true"></i>
             </button>
             <ul>
                 <li><a href="index.html#inicio">Inicio</a></li>
@@ -85,7 +96,7 @@
             <h2>Libros del mes</h2>
             <p>Descubre nuestras selecciones literarias elegidas por nuestros clientes.</p>
             
-            <div class="carrusel-libros" id="carrusel-libros">
+            <div class="carrusel carrusel-libros" id="carrusel-libros">
                 <button class="carrusel-flecha carrusel-flecha--izq" aria-label="Libro anterior">&#10094;</button>
                  
                 <div class="carrusel-contenedor" id="carrusel-contenedor-libros">
@@ -111,14 +122,14 @@
                     </div>
 
                     <div class="carrusel-item">
-                        <img src="imagenes/cadaver-exquisito.jpg" alt="Cadáver exquisito">
-                        <p class="carrusel-titulo">Cadáver exquisito</p>
-                        <p class="carrusel-autor">Agustina Bazterrica</p>
+                        <img src="imagenes/lo-que-no-tiene-nombre.jpg" alt="Lo que no tiene nombre">
+                        <p class="carrusel-titulo">Lo que no tiene nombre</p>
+                        <p class="carrusel-autor">Piedad Bonnett</p>
                         <a href="#" class="carrusel-enlace">Ver más</a>
                     </div>
 
                     <div class="carrusel-item">
-                        <img src="imagenes/la-vegetariana.jpg" alt="La vegetariana">
+                        <img src="imagenes/la-vegetariana.png" alt="La vegetariana">
                         <p class="carrusel-titulo">La vegetariana</p>
                         <p class="carrusel-autor">Han Kang</p>
                         <a href="#" class="carrusel-enlace">Ver más</a>
@@ -130,18 +141,18 @@
                         <p class="carrusel-autor">Caro Claire Burke</p>
                         <a href="#" class="carrusel-enlace">Ver más</a>
                     </div>
-
                 </div>
-                <button class="carrusel-flecha carrusel-flecha--der" aria-label="Siguiente libro">&#10095;</button>
-            </div>
 
-            <div class="carrusel-indicadores">
-                <button class="carrusel-indicador activo" data-indice="0" aria-label="Ir al libro 1"></button>
-                <button class="carrusel-indicador" data-indice="1" aria-label="Ir al libro 2"></button>
-                <button class="carrusel-indicador" data-indice="2" aria-label="Ir al libro 3"></button>
-                <button class="carrusel-indicador" data-indice="3" aria-label="Ir al libro 4"></button>
-                <button class="carrusel-indicador" data-indice="4" aria-label="Ir al libro 5"></button>
-                <button class="carrusel-indicador" data-indice="5" aria-label="Ir al libro 6"></button>
+                <button class="carrusel-flecha carrusel-flecha--der" aria-label="Siguiente libro">&#10095;</button>
+            
+                <div class="carrusel-indicadores">
+                    <button class="carrusel-indicador activo" data-indice="0" aria-label="Ir al libro 1"></button>
+                    <button class="carrusel-indicador" data-indice="1" aria-label="Ir al libro 2"></button>
+                    <button class="carrusel-indicador" data-indice="2" aria-label="Ir al libro 3"></button>
+                    <button class="carrusel-indicador" data-indice="3" aria-label="Ir al libro 4"></button>
+                    <button class="carrusel-indicador" data-indice="4" aria-label="Ir al libro 5"></button>
+                    <button class="carrusel-indicador" data-indice="5" aria-label="Ir al libro 6"></button>
+                </div>
             </div>
         </section>
 
@@ -180,7 +191,7 @@
 
             <div class="dia-detalle" id="dia-detalle" hidden>
                 <button class="cerrar-dia-detalle" id="cerrar-dia-detalle" aria-label="Cerrar detalles del día">
-                    <i class="ti ti-x"></i>
+                    <i class="ti ti-x" aria-hidden="true"></i>
                 </button>
                 <h3 id="dia-detalle-fecha"></h3>
                 <div id="dia-detalle-lista" class="dia-detalle-lista"></div>
@@ -193,7 +204,7 @@
             <p>Está abierto a quien busque una pausa distinta en su día: desde quien llega por una buena taza de café, pasando por quien busca un rincón tranquilo para leer, hasta quien desea participar en nuestros eventos.</p>
             <p>Balandú te espera con las puertas abiertas.</p>
 
-            <div class="carrusel-sobre-nosotros" id="carrusel-sobre-nosotros">
+            <div class="carrusel carrusel-sobre-nosotros" id="carrusel-sobre-nosotros">
                 <button class="carrusel-flecha carrusel-flecha--izq" aria-label="Imagen anterior">&#10094;</button>
                 
                 <div class="carrusel-contenedor" id="carrusel-contenedor-sobre-nosotros">
@@ -215,7 +226,6 @@
                     <button class="carrusel-indicador" data-indice="1" aria-label="Ir a la imagen 2"></button>
                     <button class="carrusel-indicador" data-indice="2" aria-label="Ir a la imagen 3"></button>
                 </div>
-
             </div>
         </section>
 
@@ -228,12 +238,12 @@
                 </div>
 
                 <div class="contacto-datos">
-                    <p><i class="ti ti-brand-instagram"></i> <a href="https://instagram.com/balandu" target="_blank" rel="noopener">@balandu</a></p>
-                    <p><i class="ti ti-mail"></i> <a href="mailto:info@balandu.com">info@balandu.com</a></p>
-                    <p><i class="ti ti-phone"></i> <a href="tel:+573001234567">+57 300 123 4567</a></p>
-                    <p><i class="ti ti-brand-whatsapp"></i> <a href="https://wa.me/573001234567" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
-                    <p><i class="ti ti-map-pin"></i> Carrera 123, Barranquilla, Colombia</p>
-                    <p><i class="ti ti-clock"></i> Lun-Vie: 8:00 AM - 8:00 PM<br>Sáb, Dom y Festivos: 8:00 AM a 9:00 PM</p>
+                    <p><i class="ti ti-brand-instagram" aria-hidden="true"></i> <a href="https://instagram.com/balandu" target="_blank" rel="noopener noreferrer">@balandu</a></p>
+                    <p><i class="ti ti-mail" aria-hidden="true"></i> <a href="mailto:info@balandu.com">info@balandu.com</a></p>
+                    <p><i class="ti ti-phone" aria-hidden="true"></i> <a href="tel:+573001234567">+57 300 123 4567</a></p>
+                    <p><i class="ti ti-brand-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp</a></p>
+                    <p><i class="ti ti-map-pin" aria-hidden="true"></i> Carrera 123, Barranquilla, Colombia</p>
+                    <p><i class="ti ti-clock" aria-hidden="true"></i> Lun-Vie: 8:00 AM - 8:00 PM<br>Sáb, Dom y Festivos: 8:00 AM a 9:00 PM</p>
                 </div>
 
                 <div class="formulario-contacto">
@@ -265,7 +275,7 @@
     <footer>
         <div class="footer-marca">
             <h3>Balandú</h3>
-            <p>Eslogan???</p>
+            <p>Donde el café y las buenas historias se encuentran.</p>
         </div>
 
         <div class="footer-redes">
@@ -280,7 +290,7 @@
             </a>
         </div>
 
-        <p class="footer-direccion"><i class=" ti ti-map-pin"></i> Carrera 123, Barranquilla, Colombia.</p>
+        <p class="footer-direccion"><i class="ti ti-map-pin" aria-hidden="true"></i> Carrera 123, Barranquilla, Colombia.</p>
 
         <p class="footer-copy">&copy; 2026 Balandú. Todos los derechos reservados.</p>
     </footer>
@@ -309,6 +319,7 @@
                 <span>Total</span>
                 <span class="carrito-total-monto">$0</span>
             </div>
+            <button type="button" class="carrito-checkout" id="carrito-checkout">Finalizar pedido</button>
         </div>
     </aside>
 
