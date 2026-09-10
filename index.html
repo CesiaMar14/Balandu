@@ -28,15 +28,14 @@
         <div class="encabezado-marca">
             <img src="imagenes/logo-balandu-circulo.png" alt="Logo circular de Balandú" class="logo-circular"> 
             <p class="nombre-marca">Balandú</p>
-            <p>Café literario</p>
         </div>    
         
         <form class="buscador" role="search">
-            <label for="buscar" class="sr-only">Buscar en Balandú</label>
-            <input type="search" id="buscar" name="buscar" placeholder="Buscar...">
             <button type="submit" class="buscador-boton" aria-label="Buscar">
                 <i class="ti ti-search" aria-hidden="true"></i>
             </button>
+            <label for="buscar" class="sr-only">Buscar en Balandú</label>
+            <input type="search" id="buscar" name="buscar" placeholder="Buscar...">
         </form>
 
         <nav aria-label="Navegación principal">
@@ -88,7 +87,47 @@
             <div class="hero-contenido"> 
                 <h1>Bienvenidos a Balandú</h1>
                 <p>Un lugar donde el café y la lectura se encuentran.</p>
-                <a href="#libros-del-mes" class="boton">Explorar libros</a>
+                <a href="#libros-del-mes" class="boton">Explorar libros del mes <i class="ti ti-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            
+            <div class="hero-portadas">
+                <div class="hero-portadas-track">
+                    <img src="imagenes/lost-lambs.jpg" alt="Lost lambs">
+                    <img src="imagenes/la-quimica-del-amor.jpg" alt="La química del amor">
+                    <img src="imagenes/lagrimas-en-h-mart.jpg" alt="Lágrimas en H Mart">
+                    <img src="imagenes/just-kids.jpg" alt="Just kids">
+                    <img src="imagenes/la-edad-de-la-inocencia.png" alt="La edad de la inocencia">
+                    <img src="imagenes/la-guerra-de-la-amapola.jpg" alt="La guerra de la amapola">
+                    <img src="imagenes/2666.jpg" alt="2666">
+                    <img src="imagenes/martyr.jpg" alt="Martyr!">
+                    <img src="imagenes/gente-normal.jpg" alt="Gente normal">
+                    <img src="imagenes/la-casa-en-el-mar-mas-azul.jpg" alt="La casa en el mar más azul">
+                    <img src="imagenes/mantequilla.png" alt="Mantequilla">
+                    <img src="imagenes/la-asistenta.jpg" alt="La asistenta">
+                    <img src="imagenes/te-di-ojos-y-miraste-las-tinieblas.jpg" alt="Te di ojos y miraste las tinieblas">
+                    <img src="imagenes/aburridisima.png" alt="Aburridísima">
+                    <img src="imagenes/fruit-fly.jpg" alt="Fruit fly">
+                    <img src="imagenes/la-novela-del-verano.jpg" alt="La novela del verano">
+                    <img src="imagenes/intermezzo.jpg" alt="Intermezzo">
+                    <img src="imagenes/lost-lambs.jpg" alt="Lost lambs">
+                    <img src="imagenes/la-quimica-del-amor.jpg" alt="La química del amor">
+                    <img src="imagenes/lagrimas-en-h-mart.jpg" alt="Lágrimas en H Mart">
+                    <img src="imagenes/just-kids.jpg" alt="Just kids">
+                    <img src="imagenes/la-edad-de-la-inocencia.png" alt="La edad de la inocencia">
+                    <img src="imagenes/la-guerra-de-la-amapola.jpg" alt="La guerra de la amapola">
+                    <img src="imagenes/2666.jpg" alt="2666">
+                    <img src="imagenes/martyr.jpg" alt="Martyr!">
+                    <img src="imagenes/gente-normal.jpg" alt="Gente normal">
+                    <img src="imagenes/la-casa-en-el-mar-mas-azul.jpg" alt="La casa en el mar más azul">
+                    <img src="imagenes/mantequilla.png" alt="Mantequilla">
+                    <img src="imagenes/la-asistenta.jpg" alt="La asistenta">
+                    <img src="imagenes/te-di-ojos-y-miraste-las-tinieblas.jpg" alt="Te di ojos y miraste las tinieblas">
+                    <img src="imagenes/aburridisima.png" alt="Aburridísima">
+                    <img src="imagenes/fruit-fly.jpg" alt="Fruit fly">
+                    <img src="imagenes/la-novela-del-verano.jpg" alt="La novela del verano">
+                    <img src="imagenes/intermezzo.jpg" alt="Intermezzo">
+                </div>
             </div>
         </section>
        
@@ -100,46 +139,48 @@
                 <button class="carrusel-flecha carrusel-flecha--izq" aria-label="Libro anterior">&#10094;</button>
                  
                 <div class="carrusel-contenedor" id="carrusel-contenedor-libros">
-                    <div class="carrusel-item activo">
-                        <img src="imagenes/en-diciembre-llegaban-las-brisas.jpg" alt="En diciembre llegaban las brisas">
-                        <p class="carrusel-titulo">En diciembre llegaban las brisas</p>
-                        <p class="carrusel-autor">Marvel Moreno</p>
-                        <a href="#" class="carrusel-enlace">Ver más</a>
-                    </div>
+                    <div class="carrusel-track">
+                        <div class="carrusel-item activo">
+                            <img src="imagenes/en-diciembre-llegaban-las-brisas.jpg" alt="En diciembre llegaban las brisas">
+                            <p class="carrusel-titulo">En diciembre llegaban las brisas</p>
+                            <p class="carrusel-autor">Marvel Moreno</p>
+                            <a href="#" class="carrusel-enlace">Ver más</a>
+                        </div>
 
-                    <div class="carrusel-item">
-                        <img src="imagenes/amanecer-en-la-cosecha.jpg" alt="Amanecer en la cosecha">
-                        <p class="carrusel-titulo">Amanecer en la cosecha</p>
-                        <p class="carrusel-autor">Suzanne Collins</p>
-                        <a href="#" class="carrusel-enlace">Ver más</a>
-                    </div>
+                        <div class="carrusel-item">
+                            <img src="imagenes/amanecer-en-la-cosecha.jpg" alt="Amanecer en la cosecha">
+                            <p class="carrusel-titulo">Amanecer en la cosecha</p>
+                            <p class="carrusel-autor">Suzanne Collins</p>
+                            <a href="#" class="carrusel-enlace">Ver más</a>
+                        </div>
 
-                    <div class="carrusel-item">
-                        <img src="imagenes/el-cuento-de-la-criada.jpg" alt="El cuento de la criada">
-                        <p class="carrusel-titulo">El cuento de la criada</p>
-                        <p class="carrusel-autor">Margaret Atwood</p>
-                        <a href="#" class="carrusel-enlace">Ver más</a>
-                    </div>
+                        <div class="carrusel-item">
+                            <img src="imagenes/el-cuento-de-la-criada.jpg" alt="El cuento de la criada">
+                            <p class="carrusel-titulo">El cuento de la criada</p>
+                            <p class="carrusel-autor">Margaret Atwood</p>
+                            <a href="#" class="carrusel-enlace">Ver más</a>
+                        </div>
 
-                    <div class="carrusel-item">
-                        <img src="imagenes/lo-que-no-tiene-nombre.jpg" alt="Lo que no tiene nombre">
-                        <p class="carrusel-titulo">Lo que no tiene nombre</p>
-                        <p class="carrusel-autor">Piedad Bonnett</p>
-                        <a href="#" class="carrusel-enlace">Ver más</a>
-                    </div>
+                        <div class="carrusel-item">
+                            <img src="imagenes/lo-que-no-tiene-nombre.jpg" alt="Lo que no tiene nombre">
+                            <p class="carrusel-titulo">Lo que no tiene nombre</p>
+                            <p class="carrusel-autor">Piedad Bonnett</p>
+                            <a href="#" class="carrusel-enlace">Ver más</a>
+                        </div>
 
-                    <div class="carrusel-item">
-                        <img src="imagenes/la-vegetariana.png" alt="La vegetariana">
-                        <p class="carrusel-titulo">La vegetariana</p>
-                        <p class="carrusel-autor">Han Kang</p>
-                        <a href="#" class="carrusel-enlace">Ver más</a>
-                    </div>
+                        <div class="carrusel-item">
+                            <img src="imagenes/la-vegetariana.png" alt="La vegetariana">
+                            <p class="carrusel-titulo">La vegetariana</p>
+                            <p class="carrusel-autor">Han Kang</p>
+                            <a href="#" class="carrusel-enlace">Ver más</a>
+                        </div>
 
-                    <div class="carrusel-item">
-                        <img src="imagenes/yesteryear.jpg" alt="Yesteryear">
-                        <p class="carrusel-titulo">Yesteryear</p>
-                        <p class="carrusel-autor">Caro Claire Burke</p>
-                        <a href="#" class="carrusel-enlace">Ver más</a>
+                        <div class="carrusel-item">
+                            <img src="imagenes/yesteryear.jpg" alt="Yesteryear">
+                            <p class="carrusel-titulo">Yesteryear</p>
+                            <p class="carrusel-autor">Caro Claire Burke</p>
+                            <a href="#" class="carrusel-enlace">Ver más</a>
+                        </div>
                     </div>
                 </div>
 
